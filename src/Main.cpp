@@ -1,7 +1,7 @@
 //Version 1.1 
 #include<PTHSensors.h>
 
-PIR pirobj;         //sending pin numbers to the constructor as an argument
+PIR pirobj;         
 TnH TnHobj;
 
 void setup()
