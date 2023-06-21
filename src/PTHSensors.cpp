@@ -1,19 +1,15 @@
+//Version 1.1
 # include <PTHSensors.h>
-PIR::PIR()
-//PIR::PIR(int ledpin, int pirpin)
-{
-//this->led = ledpin;
-//this->inputpin = pirpin;
-pirstate = LOW;
-val = 0;
+//Functions for Class PIR Sensor
+PIR::PIR(){
 }
 PIR::~PIR(){
 }
-/*void PIR::initialize()
+void PIR::initialize()
 {
   pinMode(led, OUTPUT);      // declare LED as output
   pinMode(pirstate, INPUT);     // declare sensor as input
-}*/
+}
 void PIR::process()
 {
    // Serial.println(inputpin);
@@ -38,7 +34,7 @@ void PIR::process()
 }
 //PIR pirobj(2, 23);
 
-//******functions for class TnH
+//******functions for class TnH (Temperature and Humidity Sensor)
 TnH::TnH(){
     Wire.begin(SDA_PIN, SCL_PIN);
 } 

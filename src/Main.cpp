@@ -1,19 +1,18 @@
+//Version 1.1 
 #include<PTHSensors.h>
 
-//PIR pirobj(2, 23);         //sending pin numbers to the constructor as an argument
-TnH* objTnH= new TnH();
-PIR* pirobj= new PIR();
+PIR pirobj;         //sending pin numbers to the constructor as an argument
+TnH TnHobj;
+
 void setup()
 {
-   // pirobj.initialize();
+    pirobj.initialize();
     Serial.begin(9600);
     Wire.begin();
 }
 void loop()
 {
-    pirobj->process();
-    objTnH->displayTnH();
-    delete objTnH;
-    delete pirobj;
+    pirobj.process();
+    TnHobj.displayTnH();
     delay(100);
 }
